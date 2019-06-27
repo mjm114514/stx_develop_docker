@@ -43,8 +43,6 @@ ENV container=docker
 RUN groupadd -g 751 cgts && \
     echo "mock:x:751:root" >> /etc/group && \
     echo "mockbuild:x:9001:" >> /etc/group && \
-    export http_proxy="http://child-prc.intel.com:913" && \
-    export https_proxy="http://child-prc.intel.com:913" && \
     yum install -y epel-release && \
     yum install -y anaconda \
         anaconda-help \
